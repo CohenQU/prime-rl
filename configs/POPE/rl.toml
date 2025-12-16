@@ -1,0 +1,27 @@
+inference_gpu_ids = [0,1,2,3]
+trainer_gpu_ids = [4,5,6,7]
+
+max_steps = 100
+
+[wandb]
+project = "POPE-hard-no-guide"
+name = "POPE-hard-no-guide"
+
+[model]
+name = "Qwen/Qwen3-0.6B"
+
+[orchestrator]
+batch_size = 32
+rollouts_per_example = 8
+seq_len = 16384
+
+[orchestrator.sampling]
+max_tokens = 16384
+
+[[orchestrator.env]]
+id = "primeintellect/single-turn-math"
+args = { dataset_name = "CohenQu/Prime-RL-POPE-no-guide", dataset_subset = "default" }
+
+[trainer] # Default trainer config
+
+[inference] # Default inference config
