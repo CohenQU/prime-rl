@@ -14,7 +14,8 @@ uv sync
 
 Instead of running 
 
-```uv pip install "flash-attn-3 @ git+https://github.com/Dao-AILab/flash-attention.git@main#subdirectory=hopper" --no-build-isolation
+```
+uv pip install "flash-attn-3 @ git+https://github.com/Dao-AILab/flash-attention.git@main#subdirectory=hopper" --no-build-isolation
 ```
 
 Directly Run
